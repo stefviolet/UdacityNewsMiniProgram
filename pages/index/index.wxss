@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: #349fe2;
+}
+.navbar-item {
+  position: relative;
+  width: 90rpx;
+  padding-left: 15rpx;
+}
+.navbar-title {
+  text-align: center;
+  color: white;
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+.navbar-item-on {
+  font-weight: bold;
+}

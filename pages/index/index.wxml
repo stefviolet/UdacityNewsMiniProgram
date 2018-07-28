@@ -1,0 +1,15 @@
+<view class='navbar'>
+  <view wx:for="{{tabs}}">
+    <view id="{{index}}" class="navbar-item {{activeIndex == index ? 'navbar-item-on' : ''}}" bindtap="navTabClick">
+      <view class="navbar-title">{{item}}</view>
+    </view> 
+  </view>
+</view>
+<view class='scroll'>
+  <scroll-view scroll-y="true">
+    <view wx:for="{{news}}" bindtap="onItemClick">
+      <view>{{item.title}}</view>
+      <image src='{{item.img}}'></image>
+    </view>
+  </scroll-view>
+</view>
