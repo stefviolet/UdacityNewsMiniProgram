@@ -7,9 +7,16 @@
 </view>
 <view class='scroll'>
   <scroll-view scroll-y="true">
-    <view wx:for="{{news}}" bindtap="onItemClick">
-      <view>{{item.title}}</view>
-      <image src='{{item.img}}'></image>
+    <view class='news' wx:for="{{news}}" bindtap="onItemClick">
+      <view class='news-text'>
+        <view>{{item.title}}</view>
+        <view class='news-author'>
+          <view>{{item.source}}</view>
+          <view>{{item.date}}</view>
+        </view>
+      </view>
+        
+        <image class='image' src='{{item.img}}'></image>
     </view>
   </scroll-view>
 </view>
