@@ -4,7 +4,6 @@
   top: 0;
   z-index: 500;
   width: 100%;
-  /* padding-top: 20rpx; */
   padding-bottom: 20rpx;
   background-color: #349fe2;
 }
@@ -24,7 +23,7 @@
 }
 .scroll {
   position: absolute;
-  top: 100rpx;
+  top: 80rpx;
 }
 .news {
   display: flex;

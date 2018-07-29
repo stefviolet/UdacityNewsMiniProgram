@@ -29,6 +29,7 @@ Page({
     for (let i = 0; i < result.length; i++) {
       let current = result[i]
       news.push({
+        id: current.id,
         title: current.title,
         source: current.source,
         date: current.date,
@@ -44,6 +45,13 @@ Page({
       activeIndex: event.currentTarget.id
     })
     this.getNews()
+  },
+  //click current news and redirect to detail page
+  onItemClick(event) {
+    console.log(event.currentTarget.dataset.id)
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + event.currentTarget.dataset.id
+    })
   }
 
 })

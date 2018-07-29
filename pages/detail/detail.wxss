@@ -1,0 +1,26 @@
+.title {
+  font-size: 45rpx;
+  padding: 20rpx;
+  line-height: 63rpx;
+}
+.sub-title {
+  padding: 20rpx;
+  display: flex;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+  line-height: 42rpx;
+  flex-direction: row;
+}
+.count {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.paragraph {
+  padding: 10rpx;
+  margin: 10rpx;
+  font-size: 35rpx;
+}
+.image {
+  width: 710rpx;
+}

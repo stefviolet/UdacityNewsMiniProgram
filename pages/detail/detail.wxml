@@ -1,0 +1,10 @@
+<view class='title'>{{title}}</view>
+<view class='sub-title'>
+  <view>{{source}}  </view>
+  <view>{{date}}</view>
+  <view class='count'>阅读 {{readcount}}</view>
+</view>
+<view class='paragraph' wx:for="{{content}}">
+  <view wx:if="{{item.type=='image'}}"><image class='image' src='{{item.text}}'/></view>
+  <view wx:else>{{item.text}}</view>
+</view>
