@@ -29,7 +29,6 @@ Page({
         id: this.data.id
       },
       success: res => {
-        console.log(res.data.result)
         this.setCurrentNews(res.data.result)
       },
       complete: () => {
@@ -53,11 +52,14 @@ Page({
       })
       }
     }
+    let date = new Date(result.date)
+    let hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+    let minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
     this.setData({
       id: result.id,
       title: result.title,
-      date: result.date,
-      source: result.source,
+      date: hours + ':' + minutes,
+      source: result.source == '' ? '未知来源' : result.source,
       content: content,
       readcount: result.readCount
     })

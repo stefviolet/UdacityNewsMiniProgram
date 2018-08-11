@@ -4,7 +4,7 @@
   top: 0;
   z-index: 500;
   width: 100%;
-  padding-bottom: 20rpx;
+  padding: 20rpx;
   background-color: #349fe2;
 }
 .navbar-item {
@@ -20,6 +20,9 @@
 }
 .navbar-item-on {
   font-weight: bold;
+  /* text-decoration: underline; */
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5rpx;
 }
 .scroll {
   position: absolute;
@@ -32,7 +35,8 @@
 }
 .news-author {
   display: flex;
-  font-size: 15rpx;
+  font-size: 25rpx;
+  opacity: 0.5;
 }
 .news-text {
   display: grid;
@@ -40,5 +44,7 @@
 .image {
   height: 200rpx;
   width: 400rpx;
-
+}
+.time {
+  padding-left: 10rpx;
 }

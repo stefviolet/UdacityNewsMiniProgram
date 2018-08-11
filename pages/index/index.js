@@ -10,6 +10,7 @@ Page({
   onLoad() {
     this.getNews()
   },
+  // get news data from API
   getNews(callback) {
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
@@ -28,11 +29,14 @@ Page({
     let news = []
     for (let i = 0; i < result.length; i++) {
       let current = result[i]
+      let date = new Date(current.date)
+      let hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+      let minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
       news.push({
         id: current.id,
         title: current.title,
-        source: current.source,
-        date: current.date,
+        source: current.source == "" ? "未知来源": current.source,
+        date: hours + ":" + minutes,
         img: current.firstImage
       })
     }
@@ -40,6 +44,7 @@ Page({
       news: news
     })
   },
+  //change tab
   navTabClick(event) {
     this.setData({
       activeIndex: event.currentTarget.id
@@ -51,6 +56,11 @@ Page({
     console.log(event.currentTarget.dataset.id)
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + event.currentTarget.dataset.id
+    })
+  },
+  onPullDownRefresh(){
+    this.getNews(() => {
+      wx.stopPullDownRefresh()
     })
   }
 

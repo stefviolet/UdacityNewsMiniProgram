@@ -11,8 +11,8 @@
       <view class='news-text'>
         <view>{{item.title}}</view>
         <view class='news-author'>
-          <view>{{item.source}}</view>
-          <view>{{item.date}}</view>
+          <view class='source'>{{item.source}}</view>
+          <view class='time'>{{item.date}}</view>
         </view>
       </view>
         
